@@ -2,19 +2,19 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 export default function LeftSider() {
   return (
-    <div className=''>
-      <div>
-      <h1>TaskFlow</h1>
+    <div  className='flex flex-col gap-5 justify-center items-center mt-[50px]'>
+      <div className='mb-[50px]'>
+        <Link to='/'>TaskFlow</Link>
       </div>
-<div>
-<Link to='/Overview' element={} >Overview</Link>
-<Link to='/MyTasks' element={} >My Tasks</Link>
-<Link to='/Board' element={} >Board</Link>
-<Link to='/Projects' element={} >Projects</Link>
-</div>
-<div>
-<Link to='/Settings' element={} >Settings</Link>
-</div>
+      <div className='flex flex-col gap-10  justify-center items-center'>
+        <Link to='/Overview' >Overview</Link>
+        <Link to='/MyTasks'  >My Tasks</Link>
+        <Link to='/Board'  >Board</Link>
+        <Link to='/Projects'  >Projects</Link>
+      </div>
+      <div className='flex gap-5 justify-center items-center mt-[50px]'>
+        <Link to='/Settings'  >Settings</Link>
+      </div>
     </div>
   )
 }
