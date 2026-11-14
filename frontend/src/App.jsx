@@ -9,13 +9,13 @@ import Setting from './pages/Setting'
 
 export default function App() {
   return (
-    <div className="h-screen py-[30px] px-[20px]  bg-gray-220">
-     <div className="shadow-[0_20px_30px_10px_rgba(0,0,0,0.4)] w-full h-full grid grid-cols-[15%_85%] rounded-xl overflow-hidden">
+    // <div className="h-screen py-[30px] px-[20px]  bg-gray-220">
+     <div className="shadow-[0_20px_30px_10px_rgba(0,0,0,0.4)] w-full h-screen grid grid-cols-[16%_84%]  ">
 
-      <div className="bg-gray-100 rounded-tl-[15px] rounded-bl-[15px]">
+      <div className="bg-[var(--leftSiderBg)]">
         <LeftSider />
       </div>
-      <div className="bg-orange-600 color-white rounded-tr-[15px] rounded-br-[15px]">
+      <div className="bg-orange-600 color-white">
         <Routes>
           <Route path='/Overview' element={<Overview />} />
           <Route path='/MyTasks' element={<MyTasks />} />
@@ -25,6 +25,6 @@ export default function App() {
         </Routes>
       </div>
       </div>
-    </div>
+    // </div>
   )
 }

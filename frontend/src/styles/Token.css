@@ -1,0 +1,108 @@
+
+:root {
+  /* ==============================
+     PURPLE COLORS
+  ============================== */
+
+  --darkPurple: #3828CC;
+  --purple: #5B4BFA;
+  --mediumPurple: #8B7CFA;
+  --lightPurple: #A78BFA;
+  --veryLightPurple: #EEECFF;
+  --extraLightPurple: #F4F2FF;
+
+  /* ==============================
+     BLUE COLORS
+  ============================== */
+
+  --darkBlue: #1D4ED8;
+  --blue: #3478F6;
+  --mediumBlue: #60A5FA;
+  --lightBlue: #BFDBFE;
+  --veryLightBlue: #E8F1FF;
+
+  /* ==============================
+     GREEN COLORS
+  ============================== */
+
+  --darkGreen: #15803D;
+  --green: #16B978;
+  --mediumGreen: #4ADE80;
+  --lightGreen: #BBF7D0;
+  --veryLightGreen: #E9F9F0;
+--leftSiderBg: #F8FAFE;
+--bgElement:#E5E3FE
+  /* ==============================
+     YELLOW / ORANGE COLORS
+  ============================== */
+
+  --darkOrange: #C2410C;
+  --orange: #F59E0B;
+  --mediumOrange: #FBBF24;
+  --lightOrange: #FDE68A;
+  --veryLightOrange: #FFF5DE;
+
+  /* ==============================
+     RED / PINK COLORS
+  ============================== */
+
+  --darkRed: #B91C1C;
+  --red: #F04452;
+  --mediumRed: #F87171;
+  --lightRed: #FECACA;
+  --veryLightRed: #FFECEE;
+
+  --darkPink: #BE185D;
+  --pink: #EC4899;
+  --lightPink: #F9A8D4;
+  --veryLightPink: #FCE7F3;
+
+  /* ==============================
+     GRAY COLORS
+  ============================== */
+
+  --darkGray: #172033;
+  --mediumDarkGray: #475569;
+  --gray: #64748B;
+  --mediumGray: #94A3B8;
+  --lightGray: #CBD5E1;
+  --veryLightGray: #E5E9F2;
+  --extraLightGray: #F1F4F9;
+  --offWhite: #F8FAFD;
+  --white: #FFFFFF;
+
+  /* ==============================
+     BACKGROUND COLORS
+  ============================== */
+
+  --mainBackground: #F5F7FC;
+  --sidebarBackground: #FFFFFF;
+  --navbarBackground: #FFFFFF;
+  --cardBackground: #FFFFFF;
+  --inputBackground: #FFFFFF;
+  --hoverBackground: #F1F3FA;
+
+  /* ==============================
+     GRADIENT COLORS
+  ============================== */
+
+  --purpleGradient: linear-gradient(
+    135deg,
+    #6555FF,
+    #4938E8
+  );
+
+  --lightBackgroundGradient: linear-gradient(
+    135deg,
+    #F8FAFF,
+    #EEF2FF
+  );
+
+  /* ==============================
+     SHADOWS
+  ============================== */
+
+  --lightShadow: 0 1px 3px rgba(15, 23, 42, 0.05);
+  --mediumShadow: 0 4px 12px rgba(15, 23, 42, 0.06);
+  --purpleShadow: 0 4px 12px rgba(91, 75, 250, 0.20);
+}
