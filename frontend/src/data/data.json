@@ -1,0 +1,27 @@
+{"Label": [
+    {
+        "slug": "/Overview",
+        "heading": "Overview",
+        "para":"Here's your productivity overview"
+    },
+    {
+        "slug": "/MyTasks",
+        "heading": "My Tasks",
+        "para": "Manage and organize all your tasks in one piece."
+    },
+    {
+        "slug": "/Board",
+        "heading": "Board",
+        "para":"Track your tasks using a kanban board"
+    },
+    {
+        "slug": "/Projects",
+        "heading": "Projects",
+        "para":"Organize your work into projects and track progress."
+    },
+    {
+        "slug": "/Settings",
+        "heading": "Settings",
+        "para":"Manage your account, preferences, and app settings."
+    }
+]}
