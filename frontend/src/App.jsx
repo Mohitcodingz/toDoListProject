@@ -15,7 +15,7 @@ export default function App() {
       <div className="bg-[var(--leftSiderBg)]">
         <LeftSider />
       </div>
-      <div className="bg-orange-600 color-white">
+      <div className="bg-white-600 color-white">
         <Routes>
           <Route path='/Overview' element={<Overview />} />
           <Route path='/MyTasks' element={<MyTasks />} />
