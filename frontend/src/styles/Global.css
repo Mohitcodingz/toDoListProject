@@ -1,11 +1,15 @@
 @import "tailwindcss";
- 
-*{
+
+* {
     font-family: Arial, Helvetica, sans-serif;
 }
+
 /* classwise css */
-@layer components{
-    .slidebar-btn{
- @apply flex flex-row  items-center gap-[15px] hover:bg-[var(--bgElement)] 
+@layer components {
+    .slidebar-btn {
+        @apply flex flex-row items-center w-[200px] h-[50px] pl-3 rounded-[10px] gap-[15px] 
     }
-}
+    .slidebar-btn:hover{
+        @apply bg-[var(--bgElement)] text-[var(--hoverTextColor)] transition-colors ease-in-out duration-200
+    }
+} 
