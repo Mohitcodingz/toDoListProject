@@ -6,7 +6,7 @@
             "description": "Get your outfit and protien and visit gym",
             "status": "todo",
             "priority": "medium",
-            "dueDate":"2026-11-19"
+            "dueDate": "2026-11-19"
         },
         {
             "id": 2,
@@ -14,7 +14,7 @@
             "description": "deep research and create a chain of automation",
             "status": "completed",
             "priority": "high",
-            "dueDate":"2026-11-19"
+            "dueDate": "2026-11-19"
         },
         {
             "id": 3,
@@ -22,7 +22,7 @@
             "description": "get new rough tough casual shoes or repair current with new lace",
             "status": "todo",
             "priority": "low",
-            "dueDate":"2026-11-19"
-        }   
+            "dueDate": "2026-11-19"
+        }
     ]
 }
