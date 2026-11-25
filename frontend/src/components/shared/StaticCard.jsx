@@ -2,95 +2,66 @@ import { GoChecklist } from "react-icons/go";
 import { FaCheckCircle, FaRegClock } from "react-icons/fa";
 import { IoWarningOutline } from "react-icons/io5";
 import { useMemo } from "react";
+import { taskStats } from "../../utils/taskStats";
 
 export default function StaticCard({ task = [] }) {
-    // const today = new Date().toISOString().split("T")[0];
+    const { total, completed, inProgress, overdue } = useMemo(
+        () => taskStats(task),
+        [task]
+    );
+    // const today = new Date().toISOString().split("T")[0]; // 2026-11-24T12:00:00.000Z 
+    // const { totalTask, DoneCount, overdueCount, inProgressCount } = useMemo(() => {
+    //     const total = task.length;
+    //     const Done = task.filter((e) => {
+    //         const status = e.status.toLowerCase();
+    //         if (status === "completed" || status === "done") {
+    //             return status === "completed" || status === "done";
+    //         }
+    //     }).length
+    //     const overdue = task.filter((e) => {
+    //         const status = e.status.toLowerCase();
+    //         if (status === "overdue" || status === "due" || status === "pending") {
+    //             return (status === "overdue" || status === "due" || status === "pending")
+    //         }
+    //     }).length
+    //     const inProgress = task.filter((e) => {
+    //         const status = e.status.toLowerCase();
 
-    //   const { total, completed, inProgress, overdue } = useMemo(() => {
-    //     const totalCount = task.length;
-    //     const completedCount = task.filter((item) => {
-    //       const status = item.status?.toLowerCase();
-    //       return status === "completed" || status === "done";
-    //     }).length;
-    //     const inProgressCount = task.filter((item) => {
-    //       const status = item.status?.toLowerCase();
-    //       return (
-    //         status === "in-progress" ||
-    //         status === "in_progress" ||
-    //         status === "progress"
-    //       );
-    //     }).length;
-    //     const overdueCount = task.filter((item) => {
-    //       const status = item.status?.toLowerCase();
-    //       return (
-    //         status !== "completed" &&
-    //         status !== "done" &&
-    //         item.dueDate &&
-    //         item.dueDate < today
-    //       );
-    //     }).length;
-
+    //         return (status === "in-progress" ||
+    //             status === "in_progress" ||
+    //             status === "inprogress" ||
+    //             status === "progress"
+    //         )
+    //     }).length
     //     return {
-    //       total: totalCount,
-    //       completed: completedCount,
-    //       inProgress: inProgressCount,
-    //       overdue: overdueCount,
-    //     };
-    //   }, [task, today]);
-
-    const today = new Date().toISOString().split("T")[0]; // 2026-11-24T12:00:00.000Z 
-    const { totalTask, DoneCount, overdueCount, inProgressCount } = useMemo(() => {
-        const total = task.length;
-        const Done = task.filter((e) => {
-            const status = e.status.toLowerCase();
-            if (status === "completed" || status === "done") {
-              return status === "completed" || status === "done";
-            }
-        }).length
-        const overdue = task.filter((e) => {
-            const status = e.status.toLowerCase();
-            if (status === "overdue" || status === "due" || status === "pending") {
-                return (status === "overdue" || status === "due" || status === "pending")
-            }
-        }).length
-        const inProgress =task.filter((e) => {
-            const status = e.status.toLowerCase();
-          
-           return(  status === "in-progress" ||
-        status === "in_progress" ||
-        status === "inprogress" ||
-        status === "progress"
-         ) 
-        }).length
-        return {
-            DoneCount: Done,
-            inProgressCount: inProgress,
-            overdueCount: overdue,
-            totalTask: total
-        }
-    }, [task, today])
+    //         DoneCount: Done,
+    //         inProgressCount: inProgress,
+    //         overdueCount: overdue,
+    //         totalTask: total
+    //     }
+    // }, [task, today])
 
 
     const stats = [
         {
             icons: <GoChecklist />,
-            value: totalTask,
+            value: total,
             label: "Total Tasks",
             bg: "#F3F3FE"
         },
         {
             icons: <FaCheckCircle className='te`xt-green-500' />,
-            value: DoneCount,
-            label: "Completed",
+            value: completed,
+            label: "completed",
             bg: "#F0FDF5"
         }, {
             icons: <FaRegClock className='text-orange-500' />,
-            value: inProgressCount,
+            value: inProgress,
             label: "In Progress",
             bg: "#FFFAF2"
         }, {
             icons: <IoWarningOutline className='text-red-500' />,
-            value: overdueCount,
+            value: overdue,
             label: "Overdue",
             bg: "#FEF4F4"
         }
