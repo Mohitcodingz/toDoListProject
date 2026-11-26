@@ -5,7 +5,7 @@ import { useMemo } from "react";
 import { taskStats } from "../../utils/taskStats";
 
 export default function StaticCard({ task = [] }) {
-    const { total, completed, inProgress, overdue } = useMemo(
+    const { total, completed, inProgress, overDue } = useMemo(
         () => taskStats(task),
         [task]
     );
@@ -61,8 +61,8 @@ export default function StaticCard({ task = [] }) {
             bg: "#FFFAF2"
         }, {
             icons: <IoWarningOutline className='text-red-500' />,
-            value: overdue,
-            label: "Overdue",
+            value: overDue,
+            label: "OverDue",
             bg: "#FEF4F4"
         }
     ]

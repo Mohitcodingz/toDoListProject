@@ -16,10 +16,10 @@ export function taskStats(task = []) {
         );
     }).length;
     const overDue = task.filter((item) => {
-        const status = task.status?.toLowerCase();
+        const status = item.status?.toLowerCase();
         const finished = status === "completed" ||
             status === "done";
-        const overDue = status === "overDue" || status === "due" || status === "pending";
+        const overDue = status === "overdue" || status === "due" || status === "pending";
         const isPastDue = item.dueDate && new Date(`${item.dueDate}T23:59:59`) < new Date();
         return !finished && (overDue || isPastDue);
     }).length;

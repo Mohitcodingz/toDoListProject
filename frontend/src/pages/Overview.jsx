@@ -1,4 +1,4 @@
-// import TaskByPriority from '../components/overview/TaskByPriority'
+import TaskByPriority from '../components/overview/TaskByPriority'
 import TaskProgress from '../components/overview/TaskProgress'
 import RightSiderNavbar from '../components/RightSiderNavbar'
 import StaticCards from '../components/shared/StaticCard'
@@ -13,8 +13,8 @@ export default function Overview() {
       <RightSiderNavbar />
       <StaticCards task={task} SetTask={SetTask} />
       <div className='grid grid-cols-2 mt-8 gap-10'>
-        <TaskProgress />
-        {/* <TaskByPriority /> */}
+        <TaskProgress task={task} />
+        <TaskByPriority />
       </div>
     </div>
   )
